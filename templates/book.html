@@ -1,0 +1,264 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Service</title>
+
+        <style>
+            *{
+                margin: 0%;
+                padding: 0%;
+                box-sizing: border-box;
+            }
+    
+            .backimg{
+                background-image: url(static/images/cn.jpeg);
+                z-index: 0;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            } 
+    
+            .header{
+                font-size: 23px;
+                color: ;
+                margin-top: 10px;
+                font-weight: 600;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .circleimg{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 2rem;
+                    margin-left: 140px;
+                    margin-top: -26px;
+                }
+    
+            .box{
+                margin: 200px;
+                margin-left: 380px;
+                margin-top: -650px;
+                filter: grayscale(5px);
+                width: 50%;
+                height: 500px;
+                background-color: green;
+                z-index: 2;
+                color: black;
+                position: a;
+                }
+    
+            .first{
+                height: 150px;
+                margin-top: -10px;
+                padding: 30px;
+            }
+    
+    
+            .inpt{
+                width: 265px;
+                height: 25px;
+                font-size: 10px;
+                color: lightgray;
+                border: none;
+                background-color: rgba(0,0,0,0);
+                border-bottom: 1px solid lightgray;
+            }
+    
+            .signin{
+                margin-top: 10px;
+                width: 80%;
+                border-radius: 2rem;
+                background-color: red;
+                height: 26px;
+                color: lightgray;
+            }
+            .btn{
+               position: absolute;
+               margin-left: 310px;
+               background-color: green;
+               color: aliceblue;
+               width: 100px;
+               height: 25px;
+            }
+    
+    
+        </style>
+    </head>
+    <body> 
+<div class="container">
+    <div class="backimg">
+        <img src="static/images/img1.jpg" width="1520" height="760">
+    </div>
+    <div class="box">
+    <h1 class="header">Book Your Service</h1>
+    <form method="post" action="/book">
+    {% csrf_token %}
+    <div class="first">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" class="inpt" id="name" name="name" placeholder="Enter your Name"><br><br><br>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="email" class="inpt" id="email" name="email" placeholder="Enter your Email"><br><br><br>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">phone number</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="phone" class="inpt" id="phone" name="phone" placeholder="Enter your phone number"><br><br><br>
+    </div>
+    <div class="mb-3">
+        <label for="address">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <textarea class="inpt" id="address" rows="3" name="address"></textarea><br><br><br>
+    </div>
+    <div class="mb-3">
+        <label for="address">Worker-Name and Type of Service</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type ="text" class="inpt" id="desc" name="desc" placeholder="Enter selected woker-name and Type of Service">
+    </div>
+    <input class="btn btn-primary" type="submit" value="Submit">
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+</form>
+</div>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .backimg{
+            background-image: url(Download\ wallpaper\ 1366x768\ girl\,\ umbrella\,\ anime\,\ rain\,\ street\,\ night\ tablet\,\ laptop\ hd\ background.jfif);
+            z-index: 0;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .header{
+            font-size: 23px;
+            color: ;
+            margin-top: 10px;
+            font-weight: 600;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .circleimg{
+                height: 50px;
+                width: 50px;
+                border-radius: 2rem;
+                margin-left: 140px;
+                margin-top: -26px;
+            }
+
+        .box{
+            margin: 200px;
+            margin-left: 380px;
+            margin-top: -650px;
+            filter: grayscale(5px);
+            width: 50%;
+            height: 500px;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 2;
+            color: lightgray;
+            position: a;
+            }
+
+        .first{
+            height: 150px;
+            margin-top: -20px;
+            padding: 30px;
+        }
+
+
+        .inpt{
+            width: 265px;
+            height: 25px;
+            font-size: 10px;
+            color: lightgray;
+            border: none;
+            background-color: rgba(0,0,0,0);
+            border-bottom: 1px solid lightgray;
+        }
+
+        .signin{
+            margin-top: 10px;
+            width: 80%;
+            border-radius: 2rem;
+            background-color: red;
+            height: 26px;
+            color: lightgray;
+        }
+        .btn{
+           position: absolute;
+           margin-left: 310px;
+           background-color: red;
+           color: aliceblue;
+           width: 100px;
+           height: 25px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="backimg"></div>
+    <div class="box">
+        <!-- <div>
+            <img src="logo.jpg" class="circleimg"></img>
+        </div> -->
+        
+        <div class="header">
+            <h3><u>Book Your Service</u></h3>
+        </div>
+            <div class="first">
+                <label for="name" class="form-label">Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="inpt" id="name" name="name" placeholder="Enter your Name"><br><br><br>
+                <label>Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="inpt" placeholder="Enter Email"><br><br><br>
+                <label> Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="inpt" placeholder="Enter Password"><br><br><br>
+                <label for="phone" class="form-label">Phone No:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="phone" class="inpt" id="phone" name="phone" placeholder="Enter your phone number"><br><br><br>
+                <label for="address">Address:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea class="inpt" id="address" rows="3" name="address"></textarea><br><br><br>
+                <label for="address">Worker-Name and Type of Service:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type ="text" class="inpt" id="desc" name="desc" placeholder="Enter selected woker-name and Type of Service"><br><br><br>
+
+                <button class="btn" type="submit" value="Submit">Submit</button>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <div>
+                <!-- <p align="center">
+                    <button type="button" class="signin">Sign In</button>
+                </p>
+                <br>
+                <p align="center">
+                    <input type="checkbox" class="remb" value="sign">
+                        <label> &nbsp;&nbsp;&nbsp;Remember Me</label><br><br>
+                </p> -->
+            </div>
+    </div>
+    
+</body>
+</html> 

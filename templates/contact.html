@@ -1,0 +1,86 @@
+<!doctype html> 
+<html lang=en dir=ltr>
+    <head>
+        <link rel="canonical" href="https://www.workerhub.com/about"/>
+        <title data-react-helmet="true">Contact & Feedback</title>
+        <style>
+            body{
+                background: #8e9eab;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                
+            }
+            .box {
+                width: 500px;
+                padding: 40px;
+                position: absolute;
+                top: 10%;
+                left: 30%;
+                background: #136a8a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+                border-radius: 15px;
+                text-align: center;
+                transition: 0.25s;
+                margin-top: 100px
+            }
+            .box h1 {
+                color: white;
+                
+                font-weight: 500
+            }
+            .box input[type="submit"] {
+                border: 0;
+                background: #4caf50;
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                padding: 14px 40px;
+                outline: none;
+                color: white;
+                border-radius: 0px;
+                transition: 0.25s;
+                cursor: pointer
+            }
+        </style>
+    </head>    
+    <body>
+        <div class="container">
+            <form class="box1">
+                <div class="social">
+                    <a href="https://www.instagram.com/WorkerHub"><img src="static/images/instagram.jpeg" height="50" width="50"></a>&nbsp;&nbsp;
+                    <a href="https://www.facebook.com/WorkerHub"><img src="static/images/facebook.jpeg" height="50" width="50"></a>&nbsp;&nbsp;
+                    <a href="https://www.twitter.com/WorkerHub"><img src="static/images/twitter.jpeg" height="50" width="50"></a>&nbsp;&nbsp;
+                    <a href="https://www.linkedin.com/WorkerHub"><img src="static/images/linkedin.jpeg" height="50" width="50"></a>
+                    <div class="header_phone ml-auto" style: bold>Call us: 00-56 445 678 33</div>
+                </div>
+        </form>
+        </div>
+
+        <div class="container">
+            <form class="box" method="post" action="/contact">
+                {% csrf_token %}
+                <h1 class="text-center">Feedback</h1>
+                <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+            </div><br>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+            </div><br>
+            <div class="mb-3">
+                <label for="phone" class="form-label">phone number</label>
+                <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+            </div><br>
+            <div class="mb-3">
+                <label for="desc">Message</label>
+                <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+            </div><br>
+            <input type="submit" value="Submit">
+            <br>
+        </form>
+        </div>
+    </body>
+</html>
